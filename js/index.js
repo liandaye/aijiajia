@@ -6,20 +6,17 @@ let bottom=$('.main-box .bottom');
 let num1=$('.num1');
 let col1,col2,col3;
 let sum=0;
-setInterval(function () {
-     col1=Math.floor(Math.random()*256)
-     col2=Math.floor(Math.random()*256)
-     col3=Math.floor(Math.random()*256)
-},1)
 text.onkeyup=function (e) {
     let len=text.value.length;
     span.innerHTML=max-len;
+     col1=Math.floor(Math.random()*256)
+     col2=Math.floor(Math.random()*256)
+     col3=Math.floor(Math.random()*256)
     text.style.color=`rgba(${col1},${col2},${col3},1)`
 }
 
 
 btn.onclick=text.onkeydown=function (e) {
-    console.log(sum)
     let val=text.value.trim();
     if(val.length==0){
         return;
